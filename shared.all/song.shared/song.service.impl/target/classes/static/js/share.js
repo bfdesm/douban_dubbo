@@ -1,1 +1,0 @@
-new QRCode(document.getElementById('qrcode'), 'https://www.qq.com/');
