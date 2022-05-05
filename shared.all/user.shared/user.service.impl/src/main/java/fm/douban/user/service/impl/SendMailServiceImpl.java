@@ -1,6 +1,7 @@
 package fm.douban.user.service.impl;
 
 import fm.douban.user.service.SendMailService;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
-@Service
+@DubboService(version = "${sendMail.service.version}")
 public class SendMailServiceImpl implements SendMailService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());

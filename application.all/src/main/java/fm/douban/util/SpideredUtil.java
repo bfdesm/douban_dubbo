@@ -10,6 +10,7 @@ import fm.douban.service.SubjectService;
 import fm.douban.user.model.User;
 import fm.douban.user.service.UserService;
 import okhttp3.Request;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class SpideredUtil {
     @Autowired
     private SingerService singerService;
 
-    @Autowired
+    @DubboReference(version = "${user.service.version}")
     private UserService userService;
 
     @Autowired

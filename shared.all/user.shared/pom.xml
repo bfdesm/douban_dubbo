@@ -13,7 +13,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>user.service</module>
-        <module>user.service.impl</module>
         <module>user.api</module>
     </modules>
 

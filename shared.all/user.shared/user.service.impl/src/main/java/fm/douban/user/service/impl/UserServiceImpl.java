@@ -6,6 +6,7 @@ import fm.douban.user.dao.UserDAO;
 import fm.douban.user.model.User;
 import fm.douban.user.param.UserQueryParam;
 import fm.douban.user.service.UserService;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.LongSupplier;
 
-@Service
+@DubboService(version = "${user.service.version}")
 public class UserServiceImpl implements UserService {
 
     private static final Logger LOG = LoggerFactory.getLogger(UserServiceImpl.class);
