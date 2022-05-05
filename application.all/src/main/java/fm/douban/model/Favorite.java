@@ -2,9 +2,10 @@ package fm.douban.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Favorite {
+public class Favorite implements Serializable {
     // 主键
     private String id;
 

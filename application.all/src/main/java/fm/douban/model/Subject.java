@@ -3,11 +3,12 @@ package fm.douban.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import fm.douban.util.IsNullUtil;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class Subject {
+public class Subject implements Serializable {
 
     private String id;
 

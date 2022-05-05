@@ -4,9 +4,10 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.NullSerializer;
 import fm.douban.user.model.User;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class UserDO {
+public class UserDO implements Serializable {
 
     private String id;
 

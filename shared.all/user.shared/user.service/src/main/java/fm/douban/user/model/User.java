@@ -3,7 +3,9 @@ package fm.douban.user.model;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.NullSerializer;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 
     private String id;
 

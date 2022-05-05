@@ -3,13 +3,14 @@ package fm.douban.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import fm.douban.user.model.User;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
 /**
  *
  */
-public class Comment {
+public class Comment implements Serializable {
 
     private long id;
 

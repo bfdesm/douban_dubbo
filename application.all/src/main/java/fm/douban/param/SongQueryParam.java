@@ -2,7 +2,9 @@ package fm.douban.param;
 
 import fm.douban.model.Song;
 
-public class SongQueryParam extends Song {
+import java.io.Serializable;
+
+public class SongQueryParam extends Song implements Serializable {
 
     // 页码号，从 1 开始计数。值为 1 表示第一页。默认第一页。
     private int pageNum = 1;

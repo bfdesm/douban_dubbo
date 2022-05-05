@@ -1,8 +1,9 @@
 package fm.douban.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class CollectionViewModel {
+public class CollectionViewModel implements Serializable {
     private Subject subject;
 
     private Singer singer;

@@ -2,10 +2,11 @@ package fm.douban.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class Song {
+public class Song implements Serializable {
 
     private String id;
 

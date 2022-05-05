@@ -3,9 +3,10 @@ package fm.douban.dataobject;
 import fm.douban.model.Comment;
 import fm.douban.user.model.User;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class CommentDO {
+public class CommentDO implements Serializable {
 
     private long id;
 

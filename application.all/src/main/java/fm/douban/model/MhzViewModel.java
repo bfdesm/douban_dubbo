@@ -1,8 +1,9 @@
 package fm.douban.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class MhzViewModel {
+public class MhzViewModel implements Serializable {
     private String title;
     private List<Subject> subjects;
 
