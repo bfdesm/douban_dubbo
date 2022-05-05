@@ -17,6 +17,30 @@
         <module name="favorite.application" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="application" target="11" />
+      <module name="business.all" target="11" />
+      <module name="comment.api" target="1.5" />
+      <module name="comment.service" target="1.5" />
+      <module name="comment.service.impl" target="1.5" />
+      <module name="comment.shared.all" target="1.5" />
+      <module name="singer.api" target="1.5" />
+      <module name="singer.service" target="1.5" />
+      <module name="singer.service.impl" target="1.5" />
+      <module name="singer.shared.all" target="1.5" />
+      <module name="song.api" target="1.5" />
+      <module name="song.service" target="1.5" />
+      <module name="song.service.impl" target="1.5" />
+      <module name="song.shared.all" target="1.5" />
+      <module name="subject.api" target="1.5" />
+      <module name="subject.service" target="1.5" />
+      <module name="subject.service.impl" target="1.5" />
+      <module name="subject.shared.all" target="1.5" />
+      <module name="user.api" target="1.5" />
+      <module name="user.service" target="1.5" />
+      <module name="user.service.impl" target="1.5" />
+      <module name="user.shared.all" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
