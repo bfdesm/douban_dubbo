@@ -6,73 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="subject.spider" />
-        <module name="singer.service.impl" />
-        <module name="singer.api" />
-        <module name="main.api" />
-        <module name="favorite.api" />
-        <module name="user.service" />
-        <module name="subject.service.impl" />
-        <module name="main.service" />
-        <module name="singer.spider" />
-        <module name="comment.service" />
-        <module name="song.spider" />
-        <module name="favorite.service" />
-        <module name="song.service" />
-        <module name="comment.api" />
-        <module name="dependency.shared" />
-        <module name="subject.api" />
-        <module name="main.service.impl" />
-        <module name="singer.service" />
-        <module name="song.service.impl" />
-        <module name="spider.util" />
-        <module name="comment.service.impl" />
-        <module name="song.api" />
-        <module name="subject.service" />
-        <module name="util.shared" />
-        <module name="favorite.service.impl" />
-        <module name="user.service.impl" />
-        <module name="user.api" />
+        <module name="application.all" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="16">
-      <module name="main.shared" target="16" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="comment.api" options="-parameters" />
-      <module name="comment.service" options="-parameters" />
-      <module name="comment.service.impl" options="-parameters" />
-      <module name="comment.shared" options="-parameters" />
-      <module name="dependency.shared" options="-parameters" />
-      <module name="favorite.api" options="-parameters" />
-      <module name="favorite.service" options="-parameters" />
-      <module name="favorite.service.impl" options="-parameters" />
-      <module name="favorite.shared" options="-parameters" />
-      <module name="main.api" options="-parameters" />
-      <module name="main.service" options="-parameters" />
-      <module name="main.service.impl" options="-parameters" />
-      <module name="main.shared" options="-parameters" />
-      <module name="singer.api" options="-parameters" />
-      <module name="singer.service" options="-parameters" />
-      <module name="singer.service.impl" options="-parameters" />
-      <module name="singer.spider" options="-parameters" />
-      <module name="song.api" options="-parameters" />
-      <module name="song.service" options="-parameters" />
-      <module name="song.service.impl" options="-parameters" />
-      <module name="song.shared" options="-parameters" />
-      <module name="song.spider" options="-parameters" />
-      <module name="spider.util" options="-parameters" />
-      <module name="subject.api" options="-parameters" />
-      <module name="subject.service" options="-parameters" />
-      <module name="subject.service.impl" options="-parameters" />
-      <module name="subject.shared" options="-parameters" />
-      <module name="subject.spider" options="-parameters" />
-      <module name="user.api" options="-parameters" />
-      <module name="user.service" options="-parameters" />
-      <module name="user.service.impl" options="-parameters" />
-      <module name="util.shared" options="-parameters" />
+      <module name="application.all" options="-parameters" />
+      <module name="practice" options="-parameters" />
     </option>
   </component>
 </project>

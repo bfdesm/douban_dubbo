@@ -2,54 +2,6 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/application.all/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/application.all/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/comment.shared/comment.api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/comment.shared/comment.service.impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/comment.shared/comment.service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/comment.shared/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/comment.shared/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/dependency.shared/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/favorite.shared/favorite.api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/favorite.shared/favorite.service.impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/favorite.shared/favorite.service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/favorite.shared/favorite.service/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/favorite.shared/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/favorite.shared/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/main.shared/main.api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/main.shared/main.service.impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/main.shared/main.service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/main.shared/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/main.shared/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/model.shared/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/singer.shared/singer.api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/singer.shared/singer.service.impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/singer.shared/singer.service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/singer.shared/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/singer.shared/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/song.shared/song.api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/song.shared/song.service.impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/song.shared/song.service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/song.shared/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/song.shared/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/spider.shared/singer.spider/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/spider.shared/song.spider/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/spider.shared/spider.util/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/spider.shared/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/spider.shared/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/spider.shared/subject.spider/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/subject.shared/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/subject.shared/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/subject.shared/subject.api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/subject.shared/subject.service.impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/subject.shared/subject.service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/user.shared/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/user.shared/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/user.shared/user.api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/user.shared/user.service.impl/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/user.shared/user.service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/shared.all/util.shared/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
