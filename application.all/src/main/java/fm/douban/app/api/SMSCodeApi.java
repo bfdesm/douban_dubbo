@@ -1,7 +1,7 @@
 package fm.douban.app.api;
 
 import fm.douban.model.Result;
-import fm.douban.service.SendMailService;
+import fm.douban.user.service.SendMailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

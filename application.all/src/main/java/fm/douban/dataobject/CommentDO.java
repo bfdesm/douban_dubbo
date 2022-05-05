@@ -1,7 +1,7 @@
 package fm.douban.dataobject;
 
 import fm.douban.model.Comment;
-import fm.douban.model.User;
+import fm.douban.user.model.User;
 
 import java.time.LocalDateTime;
 

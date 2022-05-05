@@ -79,12 +79,10 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- spring thymeleaf 支持 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-
 
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -128,12 +126,10 @@
             <version>1.2.62</version>
         </dependency>
 
-        <!-- spring session 支持 -->
         <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-core</artifactId>
         </dependency>
-
     </dependencies>
 
     <repositories>

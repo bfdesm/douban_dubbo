@@ -20,7 +20,7 @@
         <result column="parent_id" property="parentId"/>
         <result column="gmt_created" property="gmtCreated"/>
         <result column="gmt_modified" property="gmtModified"/>
-        <association property="author" javaType="fm.douban.model.User">
+        <association property="author" javaType="fm.douban.user.model.User">
             <id column="user_id" property="id" />
             <result column="name" property="name"/>
             <result column="login_name" property="loginName"/>

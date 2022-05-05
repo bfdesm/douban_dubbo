@@ -6,6 +6,7 @@ import fm.douban.service.FavoriteService;
 import fm.douban.service.SingerService;
 import fm.douban.service.SongService;
 import fm.douban.service.SubjectService;
+import fm.douban.user.model.UserLoginInfo;
 import fm.douban.util.FavoriteUtil;
 import fm.douban.util.SubjectUtil;
 import org.slf4j.Logger;
