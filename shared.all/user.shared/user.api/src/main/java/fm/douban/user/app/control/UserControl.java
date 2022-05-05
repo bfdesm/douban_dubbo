@@ -1,4 +1,4 @@
-package fm.douban.app.control;
+package fm.douban.user.app.control;
 
 import fm.douban.user.model.User;
 import fm.douban.user.model.UserLoginInfo;

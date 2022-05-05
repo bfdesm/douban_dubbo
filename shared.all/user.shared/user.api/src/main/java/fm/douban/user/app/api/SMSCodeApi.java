@@ -1,6 +1,6 @@
-package fm.douban.app.api;
+package fm.douban.user.app.api;
 
-import fm.douban.model.Result;
+import fm.douban.user.model.Result;
 import fm.douban.user.service.SendMailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="application.all" />
         <module name="user.service" />
         <module name="user.service.impl" />
+        <module name="user.api" />
+        <module name="application.all" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,6 +18,7 @@
       <module name="application.all" options="-parameters" />
       <module name="practice" options="-parameters" />
       <module name="shared.all" options="-parameters" />
+      <module name="user.api" options="-parameters" />
       <module name="user.service" options="-parameters" />
       <module name="user.service.impl" options="-parameters" />
       <module name="user.shared" options="-parameters" />

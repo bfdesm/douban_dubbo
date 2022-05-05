@@ -1,4 +1,4 @@
-package fm.douban.app.config;
+package fm.douban.user.app.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

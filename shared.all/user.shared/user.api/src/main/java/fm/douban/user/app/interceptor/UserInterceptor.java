@@ -1,4 +1,4 @@
-package fm.douban.app.interceptor;
+package fm.douban.user.app.interceptor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

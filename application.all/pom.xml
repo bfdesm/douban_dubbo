@@ -22,6 +22,12 @@
             <artifactId>user.service.impl</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>fm.douban</groupId>
+            <artifactId>user.api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
