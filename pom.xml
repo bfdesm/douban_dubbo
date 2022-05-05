@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>application.all</module>
+        <module>shared.all</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -147,7 +148,5 @@
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
     </pluginRepositories>
-
-
 
 </project>
