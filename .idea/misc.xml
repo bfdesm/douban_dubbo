@@ -5,6 +5,14 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/main.application/pom.xml" />
+        <option value="$PROJECT_DIR$/user.application/pom.xml" />
+        <option value="$PROJECT_DIR$/subject.application/pom.xml" />
+        <option value="$PROJECT_DIR$/song.application/pom.xml" />
+        <option value="$PROJECT_DIR$/singer.application/pom.xml" />
+        <option value="$PROJECT_DIR$/favorite.application/pom.xml" />
+        <option value="$PROJECT_DIR$/comment.application/pom.xml" />
+        <option value="$PROJECT_DIR$/api.application/pom.xml" />
       </list>
     </option>
   </component>

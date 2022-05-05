@@ -6,22 +6,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="user.service" />
-        <module name="user.service.impl" />
-        <module name="user.api" />
-        <module name="application.all" />
+        <module name="comment.application" />
+        <module name="api.application" />
+        <module name="main.application" />
+        <module name="user.application" />
+        <module name="subject.application" />
+        <module name="model" />
+        <module name="song.application" />
+        <module name="singer.application" />
+        <module name="favorite.application" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="application.all" options="-parameters" />
-      <module name="practice" options="-parameters" />
-      <module name="shared.all" options="-parameters" />
-      <module name="user.api" options="-parameters" />
-      <module name="user.service" options="-parameters" />
-      <module name="user.service.impl" options="-parameters" />
-      <module name="user.shared" options="-parameters" />
+      <module name="api.application" options="-parameters" />
+      <module name="comment.application" options="-parameters" />
+      <module name="favorite.application" options="-parameters" />
+      <module name="main.application" options="-parameters" />
+      <module name="model" options="-parameters" />
+      <module name="singer.application" options="-parameters" />
+      <module name="song.application" options="-parameters" />
+      <module name="subject.application" options="-parameters" />
+      <module name="user.application" options="-parameters" />
     </option>
   </component>
 </project>
