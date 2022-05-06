@@ -10,6 +10,7 @@ import fm.douban.service.SongService;
 import fm.douban.service.SubjectService;
 import fm.douban.service.UserService;
 import okhttp3.Request;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,16 +30,16 @@ import java.util.Map;
 public class SpideredUtil {
     private static final Logger logger = LoggerFactory.getLogger(SpideredUtil.class);
 
-    @Autowired
+    @DubboReference(version = "${song.service.version}")
     private SongService songService;
 
-    @Autowired
+    @DubboReference(version = "${singer.service.version}")
     private SingerService singerService;
 
-    @Autowired
+    @DubboReference(version = "${user.service.version}")
     private UserService userService;
 
-    @Autowired
+    @DubboReference(version = "${subject.service.version}")
     private SubjectService subjectService;
 
     @Autowired

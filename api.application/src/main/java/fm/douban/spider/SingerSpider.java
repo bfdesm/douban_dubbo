@@ -6,6 +6,7 @@ import fm.douban.service.SingerService;
 import fm.douban.service.SongService;
 import fm.douban.util.HttpUtil;
 import fm.douban.util.SpideredUtil;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,13 +34,13 @@ public class SingerSpider {
     @Autowired
     private HttpUtil httpUtil;
 
-    @Autowired
+    @DubboReference(version = "${singer.service.version}")
     private SingerService singerService;
 
     @Autowired
     private SpideredUtil spideredUtil;
 
-    @Autowired
+    @DubboReference(version = "${song.service.version}")
     private SongService songService;
 
     //@PostConstruct

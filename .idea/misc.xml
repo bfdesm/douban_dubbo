@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/favorite.application/pom.xml" />
         <option value="$PROJECT_DIR$/comment.application/pom.xml" />
         <option value="$PROJECT_DIR$/api.application/pom.xml" />
+        <option value="$PROJECT_DIR$/model/pom.xml" />
       </list>
     </option>
   </component>

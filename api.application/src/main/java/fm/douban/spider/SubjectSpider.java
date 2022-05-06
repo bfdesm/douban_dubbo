@@ -9,6 +9,7 @@ import fm.douban.util.HttpUtil;
 import fm.douban.util.IsNullUtil;
 import fm.douban.util.SpideredUtil;
 import fm.douban.util.SubjectUtil;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class SubjectSpider {
     @Autowired
     private HttpUtil httpUtil;
 
-    @Autowired
+    @DubboReference(version = "${subject.service.version}")
     private SubjectService subjectService;
 
     @Autowired

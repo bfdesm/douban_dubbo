@@ -48,7 +48,7 @@
       <module name="comment.application" options="-parameters" />
       <module name="favorite.application" options="-parameters" />
       <module name="main.application" options="-parameters" />
-      <module name="model" options="-parameters" />
+      <module name="model" options="" />
       <module name="singer.application" options="-parameters" />
       <module name="song.application" options="-parameters" />
       <module name="subject.application" options="-parameters" />
