@@ -1,8 +1,10 @@
 package fm.douban.service;
 
 
+import fm.douban.dataobject.CommentDO;
 import fm.douban.model.Comment;
 import fm.douban.model.Result;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -27,4 +29,18 @@ public interface CommentService {
      * @return
      */
     public Result<List<Comment>> query(String refId);
+
+    int batchAdd(List<CommentDO> userDOs);
+
+    List<CommentDO> findAll();
+
+    int insert(CommentDO commentDO);
+
+    int update(CommentDO commentDO);
+
+    int delete(long id);
+
+    List<Comment> findByRefId(String refId);
+
+    List<CommentDO> findByUserIds(List<Long> ids);
 }

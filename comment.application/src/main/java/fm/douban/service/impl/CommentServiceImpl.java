@@ -75,4 +75,31 @@ public class CommentServiceImpl implements CommentService {
 
         return result;
     }
+
+    public int batchAdd(List<CommentDO> userDOs){
+        return commentDAO.batchAdd(userDOs);
+    }
+
+    public List<CommentDO> findAll(){
+        return commentDAO.findAll();
+    }
+    public int insert(CommentDO commentDO){
+        return commentDAO.insert(commentDO);
+    }
+
+    public int update(CommentDO commentDO){
+        return commentDAO.update(commentDO);
+    }
+
+    public int delete(long id){
+        return commentDAO.delete(id);
+    }
+
+    public List<Comment> findByRefId(String refId){
+        return commentDAO.findByRefId(refId);
+    }
+
+    public List<CommentDO> findByUserIds(List<Long> ids){
+        return commentDAO.findByUserIds(ids);
+    }
 }

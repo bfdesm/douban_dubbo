@@ -28,7 +28,7 @@ import java.util.*;
 public class MainControl {
     private static final Logger LOG = LoggerFactory.getLogger(MainControl.class);
 
-    @DubboReference(version = "${subject.service.version}")
+    @DubboReference(version = "${subject.service.version}", timeout = 6000)
     private SubjectService subjectService;
 
     @DubboReference(version = "${singer.service.version}")
@@ -203,28 +203,28 @@ public class MainControl {
     }
 
     private void setMhzData(Model model) {
-        List<Subject> subjectDatas = subjectService.getSubjects(SubjectUtil.TYPE_MHZ);
+        //List<Subject> subjectDatas = subjectService.getSubjects(SubjectUtil.TYPE_MHZ);
 
-        List<Subject> artistDatas = subjectService.getRandomSubject(SubjectUtil.TYPE_MHZ, SubjectUtil.TYPE_SUB_ARTIST, 10);
-        List<Subject> moodDatas = new ArrayList<>();
-        List<Subject> ageDatas = new ArrayList<>();
-        List<Subject> styleDatas = new ArrayList<>();
+        List<Subject> artistDatas = subjectService.getSubjects(SubjectUtil.TYPE_MHZ, SubjectUtil.TYPE_SUB_ARTIST);
+        List<Subject> moodDatas = subjectService.getSubjects(SubjectUtil.TYPE_MHZ, SubjectUtil.TYPE_SUB_MOOD);
+        List<Subject> ageDatas = subjectService.getSubjects(SubjectUtil.TYPE_MHZ, SubjectUtil.TYPE_SUB_AGE);
+        List<Subject> styleDatas = subjectService.getSubjects(SubjectUtil.TYPE_MHZ, SubjectUtil.TYPE_SUB_STYLE);
 
-        if (subjectDatas != null && !subjectDatas.isEmpty()) {
-            for (Subject subject : subjectDatas) {
-                if (SubjectUtil.TYPE_SUB_MOOD.equals(subject.getSubjectSubType())) {
-                    moodDatas.add(subject);
-                } else if (SubjectUtil.TYPE_SUB_AGE.equals(subject.getSubjectSubType())) {
-                    ageDatas.add(subject);
-                } else if (SubjectUtil.TYPE_SUB_STYLE.equals(subject.getSubjectSubType())) {
-                    styleDatas.add(subject);
-                }
+//        if (subjectDatas != null && !subjectDatas.isEmpty()) {
+//            for (Subject subject : subjectDatas) {
+//                if (SubjectUtil.TYPE_SUB_MOOD.equals(subject.getSubjectSubType())) {
+//                    moodDatas.add(subject);
+//                } else if (SubjectUtil.TYPE_SUB_AGE.equals(subject.getSubjectSubType())) {
+//                    ageDatas.add(subject);
+//                } else if (SubjectUtil.TYPE_SUB_STYLE.equals(subject.getSubjectSubType())) {
+//                    styleDatas.add(subject);
+//                }
 //                else {
 //                    // 防止数据错误
 //                    LOG.error("subject data error. unknown subtype. subject=" + JSON.toJSONString(subject));
 //                }
-            }
-        }
+//            }
+//        }
 
         // 按照页面视觉组织数据：艺术家mhz，由于是独立的区块，不放一起
         Collections.shuffle(artistDatas);
