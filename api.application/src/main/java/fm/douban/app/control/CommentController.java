@@ -4,12 +4,16 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import fm.douban.dataobject.CommentDO;
 import fm.douban.model.Comment;
+import fm.douban.model.PageView;
 import fm.douban.model.Paging;
 import fm.douban.service.CommentService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -17,6 +21,12 @@ public class CommentController {
 
     @DubboReference(version = "${comment.service.version}")
     private CommentService commentService;
+
+    @Autowired
+    private KafkaTemplate<String, PageView> kafkaPageViewTemplate;
+
+    @Autowired
+    private KafkaTemplate<String, CommentDO> kafkaCommentDoTemplate;
 
     @GetMapping("/comments")
     @ResponseBody
@@ -40,6 +50,8 @@ public class CommentController {
     @ResponseBody
     public CommentDO save(@RequestBody CommentDO commentDO) {
         commentService.insert(commentDO);
+        kafkaCommentDoTemplate.send("commentView", commentDO);
+        kafkaPageViewTemplate.send("pageView", new PageView("comment", commentDO.getId()+"", new Date()));
         return commentDO;
     }
 
@@ -47,6 +59,10 @@ public class CommentController {
     @ResponseBody
     public List<CommentDO> batchAdd(@RequestBody List<CommentDO> commentDOS) {
         commentService.batchAdd(commentDOS);
+        for(CommentDO commentDO: commentDOS){
+            kafkaCommentDoTemplate.send("commentView", commentDO);
+            kafkaPageViewTemplate.send("pageView", new PageView("comment", commentDO.getId()+"", new Date()));
+        }
         return commentDOS;
     }
 
@@ -54,6 +70,8 @@ public class CommentController {
     @ResponseBody
     public CommentDO update(@RequestBody CommentDO commentDO) {
         commentService.update(commentDO);
+        kafkaCommentDoTemplate.send("commentView", commentDO);
+        kafkaPageViewTemplate.send("pageView", new PageView("comment", commentDO.getId()+"", new Date()));
         return commentDO;
     }
 

@@ -1,9 +1,6 @@
 package fm.douban.app.control;
 
-import fm.douban.model.CollectionViewModel;
-import fm.douban.model.Singer;
-import fm.douban.model.Song;
-import fm.douban.model.Subject;
+import fm.douban.model.*;
 import fm.douban.service.SingerService;
 import fm.douban.service.SongService;
 import fm.douban.service.SubjectService;
@@ -13,12 +10,14 @@ import org.apache.dubbo.config.annotation.DubboReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -39,6 +38,12 @@ public class SubjectControl {
     @Autowired
     private SingerSpider singerSpider;
 
+    @Autowired
+    private KafkaTemplate<String, Subject> kafkaSubjectTemplate;
+
+    @Autowired
+    private KafkaTemplate<String, PageView> kafkaPageViewTemplate;
+
     @GetMapping(path = "/artist")
     public String artistDetail(Model model, @RequestParam(name = "singerId") String singerId) {
         Singer singer = singerService.get(singerId);
@@ -53,6 +58,8 @@ public class SubjectControl {
             subject = new Subject();
         }
         model.addAttribute("subject", subject);
+        kafkaSubjectTemplate.send("subjectView", subject);
+        kafkaPageViewTemplate.send("pageView", new PageView("subject", new Date()));
         if(subject.getSongIds() != null && subject.getSongIds().size() != 0){
             model.addAttribute("songs", songService.getSongs(subject.getSongIds()));
         }else{
@@ -123,6 +130,9 @@ public class SubjectControl {
         }
 
         model.addAttribute("subject", subject);
+        kafkaSubjectTemplate.send("subjectView", subject);
+        kafkaPageViewTemplate.send("pageView", new PageView("subject", new Date()));
+
         List<String> songIds = subject.getSongIds();
         List<Song> songs = new ArrayList<>();
 
@@ -155,6 +165,8 @@ public class SubjectControl {
             return "error";
         }
         model.addAttribute("subject", subject);
+        kafkaSubjectTemplate.send("subjectView", subject);
+        kafkaPageViewTemplate.send("pageView", new PageView("subject", new Date()));
         List<String> songIds = subject.getSongIds();
         List<Song> songs = new ArrayList<>();
         if (songIds != null && !songIds.isEmpty()) {

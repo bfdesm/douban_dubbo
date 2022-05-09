@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,12 +41,16 @@ public class MainControl {
     @DubboReference(version = "${favorite.service.version}")
     private FavoriteService favoriteService;
 
+    @Autowired
+    private KafkaTemplate<String, PageView> kafkaPageViewTemplate;
+
     @GetMapping(path = "/index")
     public String index(Model model) {
         // 设置首屏歌曲数据
         setSongData(model);
         // 设置赫兹数据
         setMhzData(model);
+        kafkaPageViewTemplate.send("pageView", new PageView("index", new Date()));
         return "index";
     }
 
@@ -89,6 +94,7 @@ public class MainControl {
 
         Map result = new HashMap<>();
         result.put("songs", songs);
+        kafkaPageViewTemplate.send("pageView", new PageView("searchContent", new Date()));
         return result;
     }
 
@@ -119,6 +125,7 @@ public class MainControl {
             }
         }
         model.addAttribute("songs", favedSongs);
+        kafkaPageViewTemplate.send("pageView", new PageView("my", new Date()));
         return "my";
     }
 
@@ -147,17 +154,19 @@ public class MainControl {
         }
 
         resultData.put("message", "successful");
-
+        kafkaPageViewTemplate.send("pageView", new PageView("fav", new Date()));
         return resultData;
     }
 
     @GetMapping(path = "/share")
     public String share(Model model) {
+        kafkaPageViewTemplate.send("pageView", new PageView("share", new Date()));
         return "share";
     }
 
     @GetMapping(path = "/error")
     public String error(Model model) {
+        kafkaPageViewTemplate.send("pageView", new PageView("error", new Date()));
         return "error";
     }
 
@@ -183,6 +192,7 @@ public class MainControl {
             }
         }
         model.addAttribute("songs", favedSongs);
+        kafkaPageViewTemplate.send("pageView", new PageView("user", new Date()));
         return "my";
     }
 
