@@ -13,6 +13,7 @@
         <module name="subject.application" />
         <module name="model" />
         <module name="song.application" />
+        <module name="spider.application" />
         <module name="singer.application" />
         <module name="favorite.application" />
       </profile>
@@ -32,6 +33,7 @@
       <module name="song.service" target="1.5" />
       <module name="song.service.impl" target="1.5" />
       <module name="song.shared.all" target="1.5" />
+      <module name="spider.application" target="16" />
       <module name="subject.api" target="1.5" />
       <module name="subject.service" target="1.5" />
       <module name="subject.service.impl" target="1.5" />
@@ -51,6 +53,7 @@
       <module name="model" options="" />
       <module name="singer.application" options="-parameters" />
       <module name="song.application" options="-parameters" />
+      <module name="spider.application" options="-parameters" />
       <module name="subject.application" options="-parameters" />
       <module name="user.application" options="-parameters" />
     </option>
