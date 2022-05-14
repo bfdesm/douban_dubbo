@@ -55,6 +55,6 @@ api.application 最后启动,其余无顺序要求
 
 # 其他项目
 1. 豆瓣web  单机项目: https://github.com/bfdesm/douban_single
-2. 豆瓣web  dubbo分布式项目: https://github.com/bfdesm/duoban_dubbo
+2. 豆瓣web  dubbo分布式项目: https://github.com/bfdesm/douban_dubbo
 3. 豆瓣web  springcloud分布式项目: https://github.com/bfdesm/douban_springcloud(待加入)
 4. 豆瓣web  springcloud-alibaba分布式项目: https://github.com/bfdesm/douban_springcloud_alibaba
